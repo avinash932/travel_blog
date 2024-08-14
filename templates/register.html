@@ -1,0 +1,64 @@
+{% extends 'layout/base.html' %}
+
+
+{% block content %}
+<div class="container-fluid d-flex vh-100 justify-content-center align-items-center border-0">
+    <div class="card w-50 border-1 h-75">
+        <div class="row ">
+            <div class="col-md-6 bg-light col-sm-12  border-0" style="height: 75vh;">
+                <p class="ms-5" style="font-size: 1rem;">already have an account ? <a href="{% url 'login' %}">sign in</a></p>
+                <h1 class="text-center text-capitalize">Welcome to creative <BR>DEVELOPERS</h1>
+                <p class="text-center mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Autem, rerum.
+                    Doloremque, quos?</p>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    
+                    <input type="username" class="form-control  mb-2" placeholder="username" name="username"  style="height: 6vh;">
+                    
+                    <input type="email" class="form-control  mb-2" placeholder="Email" name="email" style="height: 6vh;">
+
+                    
+                    <input type="password" class="form-control mb-2" placeholder="password" name="password" style="height: 6vh;">
+                    
+                    <input type="password" class="form-control mb-2" placeholder="confirm password" name="cpassword" style="height: 6vh;">
+
+                
+                       <a href="">
+                        <button class="btn btn-outline-primary mt-2 me-5 fs-4 ps-3 pe-3 fw-bold form-control">Register</button>
+                    </a>
+                      
+                        <button class="btn btn-outline-primary mt-2 me-5 fs-4 ps-3 pe-3 fw-bold form-control" type="reset">Reset</button>
+                    
+                    
+                      
+                    <p class="text-center mt-3">sign in with google</p>
+                    <div class="d-flex justify-content-evenly fs-1 mt-3">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-google"></i>
+                        <i class="fa-brands fa-apple"></i>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-md-6 bg-primary col-sm-12 flex-column border-0 d-flex justify-content-center align-items-center"
+                style="height: 75vh;">
+                <h1 class="d-flex flex-column justify-content-center align-items-center pt-5 text-white">Make a <br>
+                    Dream</h1>
+                <p class="text-white  pt-4" style="font-size: 0.8rem; padding-left: 25%;">Lorem ipsum dolor sit amet
+                    <br> consectetur adipisicing elit. <br> Libero totam molestias <br> magnam veritatis, tenetur
+                    <br> sunt facere! Ipsa, dolor at! A.
+                </p>
+                    <div class="d-flex flex-row ps-5"><img src="avi.jpg" alt=""
+                            style="border-radius: 50%; height: 60px; width: 60px;">
+                        <p class="text-white" style="font-size: 0.8rem; padding-left: 25%;">Avinash  <br>
+                            verma</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+    
+
+    
+       
